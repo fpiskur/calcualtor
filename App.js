@@ -35,12 +35,27 @@ export default function App() {
         </View>
 
         <View style={styles.operators}>
-          <Pressable onPress={() => setOutput('')} style={[styles.button, styles.operator_button]}><Text style={styles.operator_button_text}>C</Text></Pressable>
+          <Pressable
+            onPress={() => setOutput('')}
+            style={({ pressed }) => [
+              styles.button,
+              {
+                backgroundColor: pressed ? 'blue' : 'lightblue',
+              },
+            ]}
+          >
+            <Text style={styles.operator_button_text}>C</Text>
+          </Pressable>
           <NumPadButton output={output} setOutput={setOutput}>+</NumPadButton>
           <NumPadButton output={output} setOutput={setOutput}>-</NumPadButton>
           <Pressable
             onPress={() => { setOutput(Function("return " + output)()) }}
-            style={[styles.button, styles.operator_button]}
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? 'blue' : 'lightblue',
+              },
+              styles.button
+            ]}
           >
             <Text style={styles.operator_button_text}>=</Text>
           </Pressable>
@@ -85,10 +100,6 @@ const styles = StyleSheet.create({
     borderColor: 'midnightblue',
     borderWidth: 2,
     borderStyle: 'solid',
-  },
-  operator_button: {
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   operator_button_text: {
     fontSize: 27,

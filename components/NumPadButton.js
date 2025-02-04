@@ -9,7 +9,15 @@ export default function NumPadButton({ children, output, setOutput }) {
     val = children
   }
   return (
-    <Pressable onPress={() => setOutput(output + val)} style={styles.button}>
+    <Pressable
+      onPress={() => setOutput(output + val)}
+      style={({ pressed }) => [
+        {
+          backgroundColor: pressed ? 'blue' : 'lightblue',
+        },
+        styles.button
+      ]}
+    >
       <Text style={styles.button_text}>{children}</Text>
     </Pressable>
   )
@@ -21,7 +29,6 @@ const styles = StyleSheet.create({
     padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'lightblue',
     borderColor: 'midnightblue',
     borderWidth: 2,
     borderStyle: 'solid',

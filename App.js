@@ -51,10 +51,10 @@ export default function App() {
           <Pressable
             onPress={() => { setOutput(Function("return " + output)()) }}
             style={({ pressed }) => [
+              styles.button,
               {
                 backgroundColor: pressed ? 'blue' : 'lightblue',
               },
-              styles.button
             ]}
           >
             <Text style={styles.operator_button_text}>=</Text>

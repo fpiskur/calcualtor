@@ -58,16 +58,13 @@ const styles = StyleSheet.create({
   output_container: {
     justifyContent: 'flex-end',
     alignItems: 'flex-end',
-    borderColor: 'blue',
-    borderWidth: 2,
-    borderStyle: 'solid',
     paddingBottom: 20,
   },
   output_text: {
     fontSize: 57,
   },
   numpad_container: {
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   numpad: {
     flex: 3
@@ -82,19 +79,19 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
     padding: 10,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: 'lightblue',
     borderColor: 'midnightblue',
     borderWidth: 2,
     borderStyle: 'solid',
   },
   operator_button: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   operator_button_text: {
     fontSize: 27,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
 });

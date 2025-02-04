@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
   button: {
     flex: 1,
     padding: 10,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: 'lightblue',
     borderColor: 'midnightblue',
     borderWidth: 2,
@@ -28,6 +28,6 @@ const styles = StyleSheet.create({
   },
   button_text: {
     fontSize: 27,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
 })
